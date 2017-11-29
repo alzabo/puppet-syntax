@@ -41,7 +41,7 @@ module PuppetSyntax
 
       # tag parameter in class raise warnings notice in output that prevent from succeed
       output.reject! { |e|
-        e =~ /^tag is a metaparam; this value will inherit to all contained resources in the /
+        e =~ /^\w+ is a metaparam; this value will inherit to all contained resources in the /
       }
 
       deprecations = output.select { |e|
